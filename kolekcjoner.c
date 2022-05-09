@@ -375,12 +375,12 @@ void createChild(int *input, int *output, char *path, char *name, char *argument
 
     if (dup2(input[0], 0) == -1 || dup2(output[1], 1) ==
                                    -1) {//to co do dziecka wchodzi jak input/read || to co dziecko przesyla z powrotem jako output
-        perror("Using dup2() function failed.");
+        perror("Using dup2() function failed");
         exit(DUP2);
     }
 
-    if (close(output[0]) == -1 || close(input[1]) == -1 || close(input[0]) == -1 || close(output[1]) == -1) {
-        perror("Closing pipes failed :D");
+    if (close(input[0]) == -1 || close(output[1]) == -1) {
+        perror("Closing pipes failed");
         exit(CLOSE);
     }
 
