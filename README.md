@@ -6,8 +6,13 @@ In general Poszukiwacz.c checks if stdin is a pipe file, then process some part 
 
 Collector program requier 6 arguments:
 -d (path to file with data)
+
 -s (amount of processing values from file)
+
 -w (amount of processing values from file by child processes)
+
 -f (path to file with achivments for the fastest child processes)
+
 -l (path to file with raport about every child processes birth and death)
+
 -p (max number of child processes)
