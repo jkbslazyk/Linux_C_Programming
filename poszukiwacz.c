@@ -15,7 +15,6 @@ int nValidation(int value, const char *unit);
 int main(int argc, char *argv[]) {
 
     if (argc != 2) {
-        printf("tutaj");
         exit(11);
     }
 
